@@ -4,67 +4,210 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEELMTA - Discord Szabályzat</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --bg-color: #0d0e15;
+            --card-bg: #151722;
+            --accent-primary: #ff3366; /* Piros/Neon Magenta */
+            --accent-secondary: #9933ff; /* Lila */
+            --text-main: #f0f0f5;
+            --text-muted: #a0a0b5;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav {
+            margin-bottom: 30px;
+            padding: 15px 25px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(153, 51, 255, 0.2);
+        }
+
+        nav a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-primary);
+        }
+
+        .header-container {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .ai-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            box-shadow: 0 0 15px rgba(255, 51, 102, 0.4);
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            color: var(--text-main);
+            font-size: 2.2rem;
+            margin: 10px 0;
+            background: linear-gradient(90deg, #ff3366, #9933ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .rule-section {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 800px;
+            padding: 25px 30px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.4);
+            border-left: 5px solid var(--accent-primary);
+        }
+
+        .rule-section h2 {
+            color: var(--accent-primary);
+            margin-top: 0;
+            font-size: 1.4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 10px;
+        }
+
+        .rule-item {
+            margin-bottom: 18px;
+        }
+
+        .rule-item h3 {
+            color: var(--accent-secondary);
+            font-size: 1.05rem;
+            margin: 0 0 5px 0;
+        }
+
+        .rule-item p {
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.5;
+            font-size: 0.95rem;
+            padding-left: 15px;
+            border-left: 2px solid rgba(153, 51, 255, 0.3);
+        }
+    </style>
 </head>
 <body>
+
     <nav>
-        <a href="index.html" class="nav-brand">
-            <img src="./logo.png" alt="SEELMTA Logo">
-            SEELMTA.HU
-        </a>
-        <div class="nav-links">
-            <a href="ucp.html">UCP (Fejlesztés alatt)</a>
-            <span>|</span>
-            <a href="index.html#segitseg-resz">Segítség</a>
-            <span>|</span>
-            <a href="index.html#kozosseg-resz">Közösség</a>
-            <span>|</span>
-            <a href="discord-szabalyzat.html">Discord Szabályzat</a>
-            <span>|</span>
-            <a href="szabalyzat.html">Szerver Szabályzat</a>
-        </div>
+        <a href="index.html">UCP (Fejlesztés alatt)</a> |
+        <a href="#">Segítség</a> |
+        <a href="#">Közösség</a> |
+        <a href="discord-szabalyzat.html" style="color: var(--accent-primary);">Discord Szabályzat</a> |
+        <a href="szabalyzat.html">Szerver Szabályzat</a>
     </nav>
 
-    <div class="container">
+    <div class="header-container">
+        <!-- Jelzés, hogy AI segítségével készült -->
+        <div class="ai-badge">✨ AI GENERATED & DESIGNED</div>
         <h1>SEELMTA - Discord Szabályzat</h1>
         <p class="subtitle">A Discord szerverünkön is kötelező a kulturált és békés légkör fenntartása!</p>
-
-        <section class="rules-section">
-            <h2>Általános magatartási szabályok</h2>
-            <ul>
-                <li><strong>Zaklatás, sértegetés, fenyegetés:</strong> Tilos más felhasználókat zaklatni, sértegetni, fenyegetni, provokálni vagy lejáratni.</li>
-                <li><strong>Tiszteletadás:</strong> A tiszteletteljes kommunikáció mindenki számára elvárás.</li>
-                <li><strong>SEELMTA és vezetőség tisztelete:</strong> Tilos a SEELMTA-t, a munkásságot vagy a rendszert obszcén vagy sértő módon minősíteni, akár szóban, akár írásban.</li>
-                <li>Ez vonatkozik a szerver, adminok, fejlesztők és vezetőségi tagok nyilvános szidalmazására is.</li>
-                <li><strong>Privát adatok védelme:</strong> Mások privát adatainak (pl. Facebook profil, képek) közzététele vagy felhasználása szigorúan tilos.</li>
-            </ul>
-
-            <h2>Tiltott tartalmak</h2>
-            <ul>
-                <li><strong>Politikai / etnikai / pornográf / gusztustalan tartalom:</strong> Politikai, etnikai, pornográf vagy gusztustalan tartalmak megosztása és avatarként való használata nem engedett.</li>
-                <li>A kétértelmű vagy ehhez kapcsolódó tartalom is szankcionálható.</li>
-            </ul>
-
-            <h2>Reklám, visszaélés, spam</h2>
-            <ul>
-                <li><strong>Más szerverek reklámozása:</strong> Tilos más szerverek reklámozása vagy szidása bármilyen formában (link, kép, avatar stb.).</li>
-                <li><strong>VPN és ban megkerülése:</strong> VPN használata és a bannolás utáni visszatérés nem engedélyezett.</li>
-                <li><strong>Flood és spam:</strong> Floodolás és spam küldése tilos.</li>
-            </ul>
-
-            <h2>Kommunikációs funkciók használata</h2>
-            <ul>
-                <li><strong>Taggelés:</strong> Indokolatlanul ne tagelj másokat; a funkció csak fontos, releváns esetekben használható.</li>
-                <li><strong>Privát üzenet adminnak:</strong> Adminoknak vagy vezetőségnek privát üzenetet csak indokolt esetben írj.</li>
-                <li>Ez a lehetőség kizárólag szükséghelyzetben használható.</li>
-            </ul>
-
-            <h2>OOC kereskedelem</h2>
-            <ul>
-                <li><strong>OOC kereskedelem tilalma:</strong> Az OOC (játékon kívüli) kereskedelem és annak szándéka is szigorúan tilos.</li>
-                <li>Megszegése végleges kitiltást von maga után a Discord- és a játékszerverről egyaránt.</li>
-            </ul>
-        </section>
     </div>
+
+    <div class="rule-section">
+        <h2>Általános magatartási szabályok</h2>
+        
+        <div class="rule-item">
+            <h3>Zaklatás, sértegetés, fenyegetés</h3>
+            <p>Tilos más felhasználókat zaklatni, sértegetni, fenyegetni, provokálni vagy lejáratni.</p>
+        </div>
+        
+        <div class="rule-item">
+            <h3>Tiszteletadás</h3>
+            <p>A tiszteletteljes kommunikáció mindenki számára elvárás.</p>
+        </div>
+
+        <div class="rule-item">
+            <h3>SEELMTA és vezetőség tisztelete</h3>
+            <p>Tilos a SEELMTA-t, a munkásságot vagy a rendszert obszcén vagy sértő módon minősíteni, akár szóban, akár írásban.<br>Ez vonatkozik a szerver, adminok, fejlesztők és vezetőségi tagok nyilvános szidalmazására is.</p>
+        </div>
+
+        <div class="rule-item">
+            <h3>Privát adatok védelme</h3>
+            <p>Mások privát adatainak (pl. Facebook profil, képek) közzététele vagy felhasználása szigorúan tilos.</p>
+        </div>
+    </div>
+
+    <div class="rule-section">
+        <h2>Tiltott tartalmak</h2>
+        
+        <div class="rule-item">
+            <h3>Politikai / etnikai / pornográf / gesztustalan tartalom</h3>
+            <p>Politikai, etnikai, pornográf vagy gusztustalan tartalom megosztása és avatarként való használata nem engedett.<br>A kétértelmű vagy ehhez kapcsolódó tartalom is szankcionálható.</p>
+        </div>
+    </div>
+
+    <div class="rule-section">
+        <h2>Reklám, visszaélés, spam</h2>
+        
+        <div class="rule-item">
+            <h3>Más szerverek reklámozása</h3>
+            <p>Tilos más szerverek reklámozása vagy szidása bármilyen formában (link, kép, avatar stb.).</p>
+        </div>
+
+        <div class="rule-item">
+            <h3>VPN és ban megkerülése</h3>
+            <p>VPN használata és a bannolás utáni visszatérés nem engedélyezett.</p>
+        </div>
+
+        <div class="rule-item">
+            <h3>Flood és spam</h3>
+            <p>Floodolás és spam küldése tilos.</p>
+        </div>
+    </div>
+
+    <div class="rule-section">
+        <h2>Kommunikációs funkciók használata</h2>
+        
+        <div class="rule-item">
+            <h3>Taggelés</h3>
+            <p>Indokolatlanul ne tagelj másokat; a funkció csak fontos, releváns esetekben használható.</p>
+        </div>
+
+        <div class="rule-item">
+            <h3>Privát üzenet adminnak</h3>
+            <p>Adminoknak vagy vezetőségnek privát üzenetet csak indokolt esetben írj.<br>Ez a lehetőség kizárólag szükséghelyzetben használható.</p>
+        </div>
+    </div>
+
+    <div class="rule-section">
+        <h2>OOC kereskedelem</h2>
+        
+        <div class="rule-item">
+            <h3>OOC kereskedelem tilalma</h3>
+            <p>Az OOC (játékon kívüli) kereskedelem és annak szándéka is szigorúan tilos.<br>Megszegése végleges kitiltást von maga után a Discord- és a játékszerverről egyaránt.</p>
+        </div>
+    </div>
+
 </body>
 </html>
