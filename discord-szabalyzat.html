@@ -6,7 +6,7 @@
     <title>SEELMTA - Discord Szabályzat</title>
     <style>
         body {
-            background-color: #ff3366; /* Élénk piros háttér a dobozok körül */
+            background-color: #0d0e15; /* Sötét, elegáns háttér */
             color: #222222;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
@@ -19,13 +19,13 @@
         nav {
             margin-bottom: 25px;
             padding: 12px 25px;
-            background: #ffffff; /* Fehér menü doboz */
+            background: #151722; /* Sötét menü doboz */
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 51, 102, 0.2);
         }
 
         nav a {
-            color: #555555;
+            color: #a0a0b5;
             text-decoration: none;
             margin: 0 10px;
             font-weight: 600;
@@ -40,33 +40,26 @@
             margin-bottom: 30px;
         }
 
-        /* SEELMTA stílusú logó doboz az AI badge helyett */
-        .server-logo {
-            font-size: 28px;
-            font-weight: 900;
-            color: #ffffff;
-            background: rgba(0, 0, 0, 0.25);
-            display: inline-block;
-            padding: 8px 22px;
-            border-radius: 8px;
+        /* Itt a logó helye: ha van kép, cseréld le, ha nincs, ez egy tiszta logó szöveg */
+        .server-logo-img {
+            max-width: 130px;
+            height: auto;
             margin-bottom: 15px;
-            letter-spacing: 2px;
-            border: 2px solid rgba(255, 255, 255, 0.4);
+            display: inline-block;
         }
 
         h1 {
-            color: #ffffff; /* Fehér címsor a piros háttéren */
+            color: #ff3366; /* Piros címsor */
             font-size: 2.2rem;
             margin: 10px 0;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
         .subtitle {
-            color: #ffeeee;
+            color: #cccccc;
             font-size: 1.1rem;
         }
 
-        /* Fehér dobozok a szabályoknak */
+        /* Fehér dobozok a szabályoknak a sötét háttér előtt */
         .rule-section {
             background: #ffffff; /* Fehér doboz háttér */
             width: 100%;
@@ -74,7 +67,7 @@
             padding: 25px 30px;
             margin-bottom: 25px;
             border-radius: 12px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
             border-left: 6px solid #ff3366;
         }
 
@@ -113,8 +106,8 @@
     </nav>
 
     <div class="header-container">
-        <!-- ITT VAN A SEELMTA LOGÓ (NINCS AI BADGE!) -->
-        <div class="server-logo">SEELMTA</div>
+        <!-- Ha van logo képfájlod, írd át a src-ben a nevét (pl. logo.png), vagy ha nincs, töröld ezt a sort és marad a tiszta felirat -->
+        <img src="logo.png" alt="SEELMTA Logo" class="server-logo-img">
         <h1>Discord Szabályzat</h1>
         <p class="subtitle">A Discord szerverünkön is kötelező a kulturált és békés légkör fenntartása!</p>
     </div>
