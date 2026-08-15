@@ -5,21 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEELMTA - Discord Szabályzat</title>
     <style>
-        :root {
-            --bg-color: #0d0e15;
-            --card-bg: #151722;
-            --accent-primary: #ff3366; /* Piros/Neon Magenta */
-            --accent-secondary: #9933ff; /* Lila */
-            --text-main: #f0f0f5;
-            --text-muted: #a0a0b5;
-        }
-
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            background-color: #f4f6f9; /* Világos, tiszta háttér */
+            color: #222222; /* Sötét szöveg a jó olvashatóságért */
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 20px;
+            padding: 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -27,108 +18,100 @@
 
         nav {
             margin-bottom: 30px;
-            padding: 15px 25px;
-            background: var(--card-bg);
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(153, 51, 255, 0.2);
+            padding: 12px 25px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #e0e0e0;
         }
 
         nav a {
-            color: var(--text-muted);
+            color: #555555;
             text-decoration: none;
-            margin: 0 12px;
+            margin: 0 10px;
             font-weight: 600;
-            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            color: var(--accent-primary);
+            color: #ff3366;
         }
 
         .header-container {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
         .ai-badge {
             display: inline-block;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+            background: linear-gradient(135deg, #ff3366, #9933ff);
             color: white;
-            padding: 6px 16px;
+            padding: 5px 14px;
             border-radius: 20px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: bold;
             margin-bottom: 15px;
-            box-shadow: 0 0 15px rgba(255, 51, 102, 0.4);
-            letter-spacing: 1px;
         }
 
         h1 {
-            color: var(--text-main);
+            color: #ff3366; /* Piros fejléc */
             font-size: 2.2rem;
             margin: 10px 0;
-            background: linear-gradient(90deg, #ff3366, #9933ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
         }
 
         .subtitle {
-            color: var(--text-muted);
+            color: #666666;
             font-size: 1.1rem;
         }
 
         .rule-section {
-            background: var(--card-bg);
+            background: #ffffff; /* Fehér doboz háttér */
             width: 100%;
             max-width: 800px;
             padding: 25px 30px;
-            margin-bottom: 25px;
-            border-radius: 12px;
-            box-shadow: 0 6px 25px rgba(0,0,0,0.4);
-            border-left: 5px solid var(--accent-primary);
+            margin-bottom: 20px;
+            border-radius: 10px; /* Lekerekített doboz/keret */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Finom árnyék a kerethez */
+            border-left: 5px solid #ff3366; /* Piros díszcsík bal oldalt */
+            border: 1px solid #e2e8f0;
+            border-left-width: 5px;
         }
 
         .rule-section h2 {
-            color: var(--accent-primary);
+            color: #ff3366; /* Piros címsorok a dobozokban */
+            font-size: 1.3rem;
             margin-top: 0;
-            font-size: 1.4rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
         }
 
         .rule-item {
-            margin-bottom: 18px;
+            margin-bottom: 15px;
         }
 
-        .rule-item h3 {
-            color: var(--accent-secondary);
-            font-size: 1.05rem;
-            margin: 0 0 5px 0;
+        .rule-item:last-child {
+            margin-bottom: 0;
         }
 
-        .rule-item p {
-            color: var(--text-muted);
-            margin: 0;
-            line-height: 1.5;
-            font-size: 0.95rem;
-            padding-left: 15px;
-            border-left: 2px solid rgba(153, 51, 255, 0.3);
+        .rule-item strong {
+            color: #111111;
+        }
+
+        .rule-item span {
+            color: #444444;
         }
     </style>
 </head>
 <body>
 
     <nav>
-        <a href="index.html">UCP (Fejlesztés alatt)</a> |
+        <a href="index.html">UCP</a> |
         <a href="#">Segítség</a> |
         <a href="#">Közösség</a> |
-        <a href="discord-szabalyzat.html" style="color: var(--accent-primary);">Discord Szabályzat</a> |
+        <a href="discord-szabalyzat.html" style="color: #ff3366;">Discord Szabályzat</a> |
         <a href="szabalyzat.html">Szerver Szabályzat</a>
     </nav>
 
     <div class="header-container">
-        <!-- Jelzés, hogy AI segítségével készült -->
         <div class="ai-badge">✨ AI GENERATED & DESIGNED</div>
         <h1>SEELMTA - Discord Szabályzat</h1>
         <p class="subtitle">A Discord szerverünkön is kötelező a kulturált és békés légkör fenntartása!</p>
@@ -136,76 +119,54 @@
 
     <div class="rule-section">
         <h2>Általános magatartási szabályok</h2>
-        
         <div class="rule-item">
-            <h3>Zaklatás, sértegetés, fenyegetés</h3>
-            <p>Tilos más felhasználókat zaklatni, sértegetni, fenyegetni, provokálni vagy lejáratni.</p>
+            <p><strong>Zaklatás, sértegetés, fenyegetés:</strong> <span>Tilos más felhasználókat zaklatni, sértegetni, fenyegetni, provokálni vagy lejáratni.</span></p>
         </div>
-        
         <div class="rule-item">
-            <h3>Tiszteletadás</h3>
-            <p>A tiszteletteljes kommunikáció mindenki számára elvárás.</p>
+            <p><strong>Tiszteletadás:</strong> <span>A tiszteletteljes kommunikáció mindenki számára elvárás.</span></p>
         </div>
-
         <div class="rule-item">
-            <h3>SEELMTA és vezetőség tisztelete</h3>
-            <p>Tilos a SEELMTA-t, a munkásságot vagy a rendszert obszcén vagy sértő módon minősíteni, akár szóban, akár írásban.<br>Ez vonatkozik a szerver, adminok, fejlesztők és vezetőségi tagok nyilvános szidalmazására is.</p>
+            <p><strong>SEELMTA és vezetőség tisztelete:</strong> <span>Tilos a SEELMTA-t, a munkásságot vagy a rendszert obszcén vagy sértő módon minősíteni, akár szóban, akár írásban. Ez vonatkozik a szerver, adminok, fejlesztők és vezetőségi tagok nyilvános szidalmazására is.</span></p>
         </div>
-
         <div class="rule-item">
-            <h3>Privát adatok védelme</h3>
-            <p>Mások privát adatainak (pl. Facebook profil, képek) közzététele vagy felhasználása szigorúan tilos.</p>
+            <p><strong>Privát adatok védelme:</strong> <span>Mások privát adatainak (pl. Facebook profil, képek) közzététele vagy felhasználása szigorúan tilos.</span></p>
         </div>
     </div>
 
     <div class="rule-section">
         <h2>Tiltott tartalmak</h2>
-        
         <div class="rule-item">
-            <h3>Politikai / etnikai / pornográf / gesztustalan tartalom</h3>
-            <p>Politikai, etnikai, pornográf vagy gusztustalan tartalom megosztása és avatarként való használata nem engedett.<br>A kétértelmű vagy ehhez kapcsolódó tartalom is szankcionálható.</p>
+            <p><strong>Politikai / etnikai / pornográf / gusztustalan tartalom:</strong> <span>Politikai, etnikai, pornográf vagy gusztustalan tartalmak megosztása és avatarként való használata nem engedett. A kétértelmű vagy ehhez kapcsolódó tartalom is szankcionálható.</span></p>
         </div>
     </div>
 
     <div class="rule-section">
         <h2>Reklám, visszaélés, spam</h2>
-        
         <div class="rule-item">
-            <h3>Más szerverek reklámozása</h3>
-            <p>Tilos más szerverek reklámozása vagy szidása bármilyen formában (link, kép, avatar stb.).</p>
+            <p><strong>Más szerverek reklámozása:</strong> <span>Tilos más szerverek reklámozása vagy szidása bármilyen formában (link, kép, avatar stb.).</span></p>
         </div>
-
         <div class="rule-item">
-            <h3>VPN és ban megkerülése</h3>
-            <p>VPN használata és a bannolás utáni visszatérés nem engedélyezett.</p>
+            <p><strong>VPN és ban megkerülése:</strong> <span>VPN használata és a bannolás utáni visszatérés nem engedélyezett.</span></p>
         </div>
-
         <div class="rule-item">
-            <h3>Flood és spam</h3>
-            <p>Floodolás és spam küldése tilos.</p>
+            <p><strong>Flood és spam:</strong> <span>Floodolás és spam küldése tilos.</span></p>
         </div>
     </div>
 
     <div class="rule-section">
         <h2>Kommunikációs funkciók használata</h2>
-        
         <div class="rule-item">
-            <h3>Taggelés</h3>
-            <p>Indokolatlanul ne tagelj másokat; a funkció csak fontos, releváns esetekben használható.</p>
+            <p><strong>Taggelés:</strong> <span>Indokolatlanul ne tagelj másokat; a funkció csak fontos, releváns esetekben használható.</span></p>
         </div>
-
         <div class="rule-item">
-            <h3>Privát üzenet adminnak</h3>
-            <p>Adminoknak vagy vezetőségnek privát üzenetet csak indokolt esetben írj.<br>Ez a lehetőség kizárólag szükséghelyzetben használható.</p>
+            <p><strong>Privát üzenet adminnak:</strong> <span>Adminoknak vagy vezetőségnek privát üzenetet csak indokolt esetben írj. Ez a lehetőség kizárólag szükséghelyzetben használható.</span></p>
         </div>
     </div>
 
     <div class="rule-section">
         <h2>OOC kereskedelem</h2>
-        
         <div class="rule-item">
-            <h3>OOC kereskedelem tilalma</h3>
-            <p>Az OOC (játékon kívüli) kereskedelem és annak szándéka is szigorúan tilos.<br>Megszegése végleges kitiltást von maga után a Discord- és a játékszerverről egyaránt.</p>
+            <p><strong>OOC kereskedelem tilalma:</strong> <span>Az OOC (játékon kívüli) kereskedelem és annak szándéka is szigorúan tilos. Megszegése végleges kitiltást von maga után a Discord- és a játékszerverről egyaránt.</span></p>
         </div>
     </div>
 
