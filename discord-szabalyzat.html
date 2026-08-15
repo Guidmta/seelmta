@@ -5,18 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SEELMTA - Discord Szabályzat</title>
     <style>
-        :root {
-            --bg-color: #0d0e15;
-            --card-bg: #151722;
-            --accent-primary: #ff3366; /* Piros / Neon Magenta */
-            --accent-secondary: #9933ff; /* Lila */
-            --text-main: #ffffff;
-            --text-muted: #c0c0d0;
-        }
-
         body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
+            background-color: #ff3366; /* Piros háttér a dobozok körül */
+            color: #222222;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 30px 20px;
@@ -26,73 +17,72 @@
         }
 
         nav {
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             padding: 12px 25px;
-            background: var(--card-bg);
+            background: #ffffff; /* Fehér menü doboz */
             border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(153, 51, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
 
         nav a {
-            color: var(--text-muted);
+            color: #555555;
             text-decoration: none;
             margin: 0 10px;
             font-weight: 600;
-            transition: color 0.3s;
         }
 
         nav a:hover {
-            color: var(--accent-primary);
+            color: #ff3366;
         }
 
         .header-container {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
 
-        .ai-badge {
+        /* Itt van a SEELMTA logó helye az AI jelvény helyett */
+        .server-logo {
+            font-size: 28px;
+            font-weight: 900;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.2);
             display: inline-block;
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: bold;
+            padding: 8px 20px;
+            border-radius: 8px;
             margin-bottom: 15px;
-            box-shadow: 0 0 15px rgba(255, 51, 102, 0.3);
+            letter-spacing: 2px;
+            border: 2px solid rgba(255, 255, 255, 0.4);
         }
 
         h1 {
-            color: var(--accent-primary);
+            color: #ffffff; /* Fehér címsor a piros háttéren */
             font-size: 2.2rem;
             margin: 10px 0;
-            text-shadow: 0 0 10px rgba(255, 51, 102, 0.2);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
         }
 
         .subtitle {
-            color: var(--text-muted);
+            color: #ffeeee; /* Világosabb altszöveg */
             font-size: 1.1rem;
         }
 
-        /* Itt vannak a keretek / dobozok, amiket kértél */
+        /* Fehér dobozok a szabályoknak */
         .rule-section {
-            background: var(--card-bg);
+            background: #ffffff; /* Fehér doboz háttér */
             width: 100%;
             max-width: 800px;
             padding: 25px 30px;
             margin-bottom: 25px;
             border-radius: 12px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 51, 102, 0.2);
-            border-left: 6px solid var(--accent-primary);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            border-left: 6px solid #ff3366;
         }
 
         .rule-section h2 {
-            color: var(--accent-primary);
+            color: #ff3366; /* Piros címsorok a dobozban */
             font-size: 1.3rem;
             margin-top: 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            border-bottom: 1px solid #eee;
             padding-bottom: 10px;
         }
 
@@ -102,13 +92,13 @@
         }
 
         li {
-            color: var(--text-muted);
+            color: #444444;
             margin-bottom: 12px;
             line-height: 1.6;
         }
 
         li strong {
-            color: var(--text-main);
+            color: #111111;
         }
     </style>
 </head>
@@ -118,13 +108,14 @@
         <a href="index.html">UCP</a> |
         <a href="#">Segítség</a> |
         <a href="#">Közösség</a> |
-        <a href="discord-szabalyzat.html" style="color: var(--accent-primary);">Discord Szabályzat</a> |
+        <a href="discord-szabalyzat.html" style="color: #ff3366;">Discord Szabályzat</a> |
         <a href="szabalyzat.html">Szerver Szabályzat</a>
     </nav>
 
     <div class="header-container">
-        <div class="ai-badge">✨ AI GENERATED & DESIGNED</div>
-        <h1>SEELMTA - Discord Szabályzat</h1>
+        <!-- AI jelvény helyett SEELMTA logó elem -->
+        <div class="server-logo">SEELMTA</div>
+        <h1>Discord Szabályzat</h1>
         <p class="subtitle">A Discord szerverünkön is kötelező a kulturált és békés légkör fenntartása!</p>
     </div>
 
