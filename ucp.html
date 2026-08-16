@@ -86,16 +86,14 @@
 
             <hr class="border-zinc-800">
 
-            <!-- ITT VANNAK A KÉPRŐL AZ ADATOK (BAL OLDALON) -->
+            <!-- PROFIL SZEKCIÓ (0 / ÜRES) -->
             <div class="space-y-4">
-                
-                <!-- 1. Profil fejléc -->
                 <div>
-                    <h2 id="profile-title" class="text-lg font-bold text-white">Elo2009 profilja</h2>
-                    <p class="text-xs text-zinc-400">Account ID: <span id="account-id" class="text-white font-medium">1681</span></p>
+                    <h2 id="profile-title" class="text-lg font-bold text-white">Vendég profil</h2>
+                    <p class="text-xs text-zinc-400">Account ID: <span id="account-id" class="text-white font-medium">0</span></p>
                 </div>
 
-                <!-- 2. Felhasználói adatok kártya -->
+                <!-- Felhasználói adatok kártya -->
                 <div class="bg-zinc-950/60 border border-zinc-800/80 rounded-2xl p-4 shadow-md space-y-3">
                     <div class="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
@@ -106,49 +104,49 @@
                     <div class="space-y-2 text-xs pt-1">
                         <div class="flex justify-between items-center text-zinc-400">
                             <span>Email</span>
-                            <span id="user-email" class="text-white font-medium truncate max-w-[130px]">elohalasz2020@gmail.com</span>
+                            <span id="user-email" class="text-white font-medium">-</span>
                         </div>
                         <div class="flex justify-between items-center text-zinc-400">
                             <span>Utoljára online</span>
-                            <span id="user-lastonline" class="text-white font-medium">2026. 08. 16. 16:59</span>
+                            <span id="user-lastonline" class="text-white font-medium">-</span>
                         </div>
                         <div class="flex justify-between items-center text-zinc-400">
                             <span>Regisztráció</span>
-                            <span id="user-reg" class="text-white font-medium">2024. 09. 02. 19:47</span>
+                            <span id="user-reg" class="text-white font-medium">-</span>
                         </div>
                         <div class="flex justify-between items-center text-zinc-400">
                             <span>Prémium egyenleg</span>
-                            <span id="user-pp" class="text-sky-400 font-medium">440 PP</span>
+                            <span id="user-pp" class="text-sky-400 font-medium">0 PP</span>
                         </div>
                         <div class="flex justify-between items-center text-zinc-400">
                             <span>Kétlépcsős azonosítás</span>
-                            <span class="text-red-400 font-medium">Kikapcsolva</span>
+                            <span class="text-red-400 font-medium">-</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- 3. Serial kártya -->
+                <!-- Serial kártya -->
                 <div class="bg-zinc-950/60 border border-zinc-800/80 rounded-2xl p-4 shadow-md space-y-2">
                     <div class="flex items-center gap-2">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                         <h3 class="font-bold text-white text-xs uppercase tracking-wider">Serial</h3>
                     </div>
                     <div class="bg-zinc-900 border border-zinc-800/50 p-2 rounded-xl text-[10px] text-zinc-300 font-mono break-all text-center">
-                        11127EEDF5BDD4D4CCABDED3E13C72
+                        0
                     </div>
                 </div>
 
-                <!-- 4. Karakter skin kártya -->
+                <!-- Karakter skin kártya -->
                 <div class="bg-zinc-950/60 border border-zinc-800/80 rounded-2xl overflow-hidden shadow-md flex flex-col justify-between">
                     <div>
-                        <div class="w-full h-44 bg-zinc-950 overflow-hidden relative border-b border-zinc-800/80">
-                            <img id="character-skin" src="skin_placeholder.png" alt="Karakter Skin" class="w-full h-full object-cover object-top">
+                        <div class="w-full h-44 bg-zinc-950 overflow-hidden relative border-b border-zinc-800/80 flex items-center justify-center text-zinc-600 text-xs">
+                            Nincs karakter
                         </div>
                         <div class="p-4 space-y-3">
                             <div class="flex items-center gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
                                 <div>
-                                    <h3 id="character-name" class="font-bold text-white text-xs">James William</h3>
+                                    <h3 id="character-name" class="font-bold text-white text-xs">Nincs karakter</h3>
                                     <p class="text-[10px] text-zinc-500">Karakter információk</p>
                                 </div>
                             </div>
@@ -156,27 +154,27 @@
                             <div class="space-y-1.5 text-xs pt-1 border-t border-zinc-800/60">
                                 <div class="flex justify-between text-zinc-400">
                                     <span>Karakter ID</span>
-                                    <span id="character-id" class="text-white font-medium">1681</span>
+                                    <span id="character-id" class="text-white font-medium">0</span>
                                 </div>
                                 <div class="flex justify-between text-zinc-400">
                                     <span>Játszott idő</span>
-                                    <span id="character-playtime" class="text-white font-medium">1 655 perc (LVL 5)</span>
+                                    <span id="character-playtime" class="text-white font-medium">0 perc (LVL 0)</span>
                                 </div>
                                 <div class="flex justify-between text-zinc-400">
                                     <span>Készpénz</span>
-                                    <span id="character-cash" class="text-emerald-400 font-medium">307 500 $</span>
+                                    <span id="character-cash" class="text-emerald-400 font-medium">0 $</span>
                                 </div>
                                 <div class="flex justify-between text-zinc-400">
                                     <span>Bankszámla</span>
-                                    <span id="character-bank" class="text-red-400 font-medium">-9 045 $</span>
+                                    <span id="character-bank" class="text-red-400 font-medium">0 $</span>
                                 </div>
                                 <div class="flex justify-between text-zinc-400">
                                     <span>SlotCoins</span>
-                                    <span class="text-amber-400 font-medium">3 887 679 SC</span>
+                                    <span class="text-amber-400 font-medium">0 SC</span>
                                 </div>
                                 <div class="flex justify-between text-zinc-400">
                                     <span>Utoljára használva</span>
-                                    <span class="text-white font-medium text-[11px]">2026. 08. 16. 17:16</span>
+                                    <span class="text-white font-medium text-[11px]">-</span>
                                 </div>
                             </div>
                         </div>
@@ -211,32 +209,32 @@
         <!-- Üdvözlés -->
         <div>
             <span class="text-xs text-emerald-400 font-semibold tracking-wider uppercase">Irányítópult</span>
-            <h1 class="text-3xl font-bold text-white mt-1">Jó estét, <span id="welcome-name">James William</span>!</h1>
+            <h1 class="text-3xl font-bold text-white mt-1">Üdvözöllek, <span id="welcome-name">Vendég</span>!</h1>
         </div>
 
         <!-- Közös cél doboz -->
         <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 shadow-xl">
             <div class="flex justify-between items-center mb-2">
                 <span class="text-xs font-semibold text-zinc-400 uppercase tracking-wider">Közös cél</span>
-                <span class="text-xs font-bold text-emerald-400">94 / 50</span>
+                <span class="text-xs font-bold text-emerald-400">0 / 50</span>
             </div>
             <p class="text-sm font-medium text-white mb-4">Érjük el az 50 fős peaket</p>
             <div class="w-full bg-zinc-950 h-2 rounded-full overflow-hidden mb-3">
-                <div class="bg-emerald-500 h-full rounded-full" style="width: 100%;"></div>
+                <div class="bg-emerald-500 h-full rounded-full" style="width: 0%;"></div>
             </div>
             <div class="text-xs text-zinc-400">
                 Jutalom: <span class="text-white font-medium">$750,000 + 2000 PP</span>
             </div>
         </div>
 
-        <!-- Fő statisztika / Kártyák -->
+        <!-- Fő statisztika / Kártyák (Mindenhol 0) -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
             
             <!-- 1. Prémium Kártya -->
             <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 shadow-lg flex flex-col justify-between">
                 <div>
                     <div class="text-xs font-medium text-zinc-400 mb-1">PRÉMIUM</div>
-                    <div class="text-2xl font-bold text-sky-400 mb-1">10,323 <span class="text-sm font-normal text-zinc-400">PP</span></div>
+                    <div class="text-2xl font-bold text-sky-400 mb-1">0 <span class="text-sm font-normal text-zinc-400">PP</span></div>
                 </div>
                 <div class="text-xs text-zinc-500">Fiók egyenleg</div>
             </div>
@@ -245,16 +243,16 @@
             <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 shadow-lg flex flex-col justify-between">
                 <div>
                     <div class="text-xs font-medium text-zinc-400 mb-1">JÁTÉKIDŐ</div>
-                    <div class="text-2xl font-bold text-white mb-1">27h 35m</div>
+                    <div class="text-2xl font-bold text-white mb-1">0h 0m</div>
                 </div>
-                <div class="text-xs text-zinc-500">Frissítve: <span class="text-zinc-300">most</span></div>
+                <div class="text-xs text-zinc-500">Frissítve: <span class="text-zinc-300">-</span></div>
             </div>
 
             <!-- 3. Állapot Kártya -->
             <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 shadow-lg flex flex-col justify-between">
                 <div>
                     <div class="text-xs font-medium text-zinc-400 mb-1">ÁLLAPOT</div>
-                    <div class="text-2xl font-bold text-white mb-1">100 / <span class="text-red-400">0</span></div>
+                    <div class="text-2xl font-bold text-white mb-1">0 / <span class="text-red-400">0</span></div>
                 </div>
                 <div class="text-xs text-zinc-500">HP · ARM</div>
             </div>
