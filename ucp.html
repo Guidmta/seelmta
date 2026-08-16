@@ -8,7 +8,7 @@
 </head>
 <body class="bg-zinc-950 text-white font-sans min-h-screen flex flex-col justify-between p-6 relative overflow-x-hidden">
 
-    <!-- Háttérkép: A lilás Los Santos városkép -->
+    <!-- Háttérkép -->
     <div class="absolute inset-0 z-0">
         <img src="ucp hater.jpg" alt="SEELMTA Háttér" class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-zinc-950/70 backdrop-blur-[2px]"></div>
@@ -88,45 +88,46 @@
 
     <footer class="relative z-10"></footer>
 
-    <!-- JavaScript: Emlékezz rám logika & localStorage -->
+    <!-- JavaScript: Automatikus kitöltés és mentés -->
     <script>
         const form = document.getElementById('login-form');
         const usernameInput = document.getElementById('username');
+        const passwordInput = document.getElementById('password');
         const rememberCheckbox = document.getElementById('remember-me');
 
-        // Ha korábban bejelölte az "Emlékezz rám"-ot, töltsük be a felhasználónevet
+        // Amikor betöltődik az oldal, megnézzük, hogy mentett-e már valamit
         window.addEventListener('DOMContentLoaded', () => {
             const savedUser = localStorage.getItem('seelmta_saved_user');
-            if (savedUser) {
-                usernameInput.value = savedUser;
-                rememberCheckbox.checked = true;
-            }
+            const savedPass = localStorage.getItem('seelmta_saved_pass');
+            const isRemembered = localStorage.getItem('seelmta_remember') === 'true';
 
-            // Opcionális: Ha már be van jelentkezve (van mentett session), automatikusan átvihetjük a dashboardra is
-            if (localStorage.getItem('seelmta_logged_in') === 'true') {
-                const charName = localStorage.getItem('seelmta_character') || 'Lilly Kia';
-                // window.location.href = `dashboard.html?character=${encodeURIComponent(charName)}`;
+            if (isRemembered) {
+                if (savedUser) usernameInput.value = savedUser;
+                if (savedPass) passwordInput.value = savedPass;
+                rememberCheckbox.checked = true;
             }
         });
 
+        // Amikor rákattint a bejelentkezésre
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const accountName = usernameInput.value.trim();
-            let characterName = accountName.charAt(0).toUpperCase() + accountName.slice(1) + "_Character"; 
+            const passwordVal = passwordInput.value;
+            let characterName = accountName.charAt(0).toUpperCase() + accountName.slice(1) + "_Character";
 
             // Ha be van pipálva az "Emlékezz rám"
             if (rememberCheckbox.checked) {
                 localStorage.setItem('seelmta_saved_user', accountName);
-                localStorage.setItem('seelmta_logged_in', 'true');
-                localStorage.setItem('seelmta_character', characterName);
+                localStorage.setItem('seelmta_saved_pass', passwordVal);
+                localStorage.setItem('seelmta_remember', 'true');
             } else {
-                // Ha nincs bepipálva, töröljük a mentést
+                // Ha nincs bepipálva, töröljük a mentett adatokat
                 localStorage.removeItem('seelmta_saved_user');
-                localStorage.removeItem('seelmta_logged_in');
-                localStorage.removeItem('seelmta_character');
+                localStorage.removeItem('seelmta_saved_pass');
+                localStorage.removeItem('seelmta_remember');
             }
 
-            // Átirányítás a dashboardra
+            // Átirányítás a dashboardra a karakter névvel
             window.location.href = `dashboard.html?character=${encodeURIComponent(characterName)}`;
         });
     </script>
