@@ -6,21 +6,33 @@
     <title>SEELMTA - Bejelentkezés</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-zinc-950 text-white font-sans min-h-screen flex flex-col justify-between p-6">
+<body class="bg-zinc-950 text-white font-sans min-h-screen flex flex-col justify-between p-6 relative">
 
-    <!-- Felső Navigációs Sáv: Bal oldalon a zöld hatszög logó + SEELMTA név -->
+    <!-- Felső Navigációs Sáv: Balra pontos logó + név, Jobbra Kezdőlap gomb -->
     <header class="w-full max-w-7xl mx-auto flex items-center justify-between py-2">
+        
+        <!-- Bal oldal: Pontos zöld hatszög S logó + SEELMTA név -->
         <a href="index.html" class="flex items-center gap-3 group">
             <div class="w-8 h-8 flex items-center justify-center">
-                <svg viewBox="0 0 100 115" class="w-full h-full drop-shadow-md" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M50 3L94.5 28.7V80.3L50 106L5.5 80.3V28.7L50 3Z" stroke="#4ADE80" stroke-width="8" stroke-linejoin="round"/>
-                    <path d="M50 20L80.5 37.5V72.5L50 90L19.5 72.5V37.5L50 20Z" stroke="#4ADE80" stroke-width="4" stroke-opacity="0.4" stroke-linejoin="round"/>
-                    <path d="M70 42H35V52H65V68H30" stroke="#4ADE80" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg viewBox="0 0 100 100" class="w-full h-full drop-shadow-md" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Külső hatszög -->
+                    <path d="M50 5L90 27.5V72.5L50 95L10 72.5V27.5L50 5Z" stroke="#4ADE80" stroke-width="7" stroke-linejoin="round"/>
+                    <!-- Belső S betű vonalvezetés -->
+                    <path d="M68 35H38C33 35 30 38 30 43V47C30 52 33 55 38 55H62C67 55 70 58 70 63V67C70 72 67 75 62 75H32" stroke="#4ADE80" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </div>
             <span class="font-bold text-lg tracking-wider text-white group-hover:text-emerald-400 transition-colors">SEELMTA</span>
         </a>
-        <div></div>
+
+        <!-- Jobb oldal: Kezdőlap gomb -->
+        <div>
+            <a href="index.html" class="text-sm bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 px-4 py-2 rounded-xl transition-colors flex items-center gap-2 shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                <span>Kezdőlap</span>
+            </a>
+        </div>
     </header>
 
     <!-- Középső Bejelentkezési Doboz -->
