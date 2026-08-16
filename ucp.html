@@ -6,18 +6,23 @@
     <title>SEELMTA - Bejelentkezés</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-zinc-950 text-white font-sans min-h-screen flex flex-col justify-between p-6 relative">
+<body class="bg-zinc-950 text-white font-sans min-h-screen flex flex-col justify-between p-6 relative overflow-x-hidden">
+
+    <!-- Háttérkép: A lilás Los Santos városkép -->
+    <div class="absolute inset-0 z-0">
+        <img src="ucp hater.jpg" alt="SEELMTA Háttér" class="w-full h-full object-cover">
+        <!-- Finom sötétítő réteg, hogy a doboz és a szövegek gyönyörűen olvashatóak maradjanak -->
+        <div class="absolute inset-0 bg-zinc-950/70 backdrop-blur-[2px]"></div>
+    </div>
 
     <!-- Felső Navigációs Sáv -->
-    <header class="w-full max-w-7xl mx-auto flex items-center justify-between py-2">
+    <header class="w-full max-w-7xl mx-auto flex items-center justify-between py-2 relative z-10">
         
-        <!-- Bal oldal: Pontosított zöld hatszög S logó + SEELMTA név -->
+        <!-- Bal oldal: Zöld hatszög S logó + SEELMTA név -->
         <a href="index.html" class="flex items-center gap-3 group">
             <div class="w-8 h-8 flex items-center justify-center">
                 <svg viewBox="0 0 512 512" class="w-full h-full drop-shadow-md" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Külső hatszög -->
                     <path d="M256 32L448 142.4V369.6L256 480L64 369.6V142.4L256 32Z" stroke="#4ADE80" stroke-width="36" stroke-linejoin="round"/>
-                    <!-- Pontos S betű struktúra a referenciád alapján -->
                     <path d="M362 176H190C165 176 150 191 150 216V232C150 257 165 272 190 272H322C347 272 362 287 362 312V328C362 353 347 368 322 368H150" stroke="#4ADE80" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </div>
@@ -26,7 +31,7 @@
 
         <!-- Jobb oldal: Kezdőlap gomb -->
         <div>
-            <a href="index.html" class="text-sm bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 px-4 py-2 rounded-xl transition-colors flex items-center gap-2 shadow-lg">
+            <a href="index.html" class="text-sm bg-zinc-900/80 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 px-4 py-2 rounded-xl transition-colors flex items-center gap-2 shadow-lg backdrop-blur-md">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
@@ -36,8 +41,8 @@
     </header>
 
     <!-- Középső Bejelentkezési Doboz -->
-    <main class="flex-grow flex items-center justify-center">
-        <div class="w-full max-w-md bg-zinc-900 border border-zinc-800 p-8 rounded-2xl shadow-2xl">
+    <main class="flex-grow flex items-center justify-center relative z-10">
+        <div class="w-full max-w-md bg-zinc-900/90 border border-zinc-800/80 p-8 rounded-2xl shadow-2xl backdrop-blur-md">
             
             <div class="text-center mb-6">
                 <h1 class="text-xl font-bold text-white mb-1">Bejelentkezés</h1>
@@ -48,7 +53,7 @@
                 <div>
                     <label class="block text-xs font-semibold text-zinc-300 mb-2">Felhasználónév</label>
                     <input type="text" id="username" required 
-                        class="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-3 px-4 text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-600 transition-colors">
+                        class="w-full bg-zinc-950/80 border border-zinc-800 rounded-xl py-3 px-4 text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-600 transition-colors">
                 </div>
 
                 <div>
@@ -58,7 +63,7 @@
                     </div>
                     <div class="relative">
                         <input type="password" id="password" required 
-                            class="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-3 pl-4 pr-10 text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-600 transition-colors">
+                            class="w-full bg-zinc-950/80 border border-zinc-800 rounded-xl py-3 pl-4 pr-10 text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-600 transition-colors">
                         <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-zinc-500 cursor-pointer">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -76,7 +81,7 @@
                     </label>
                 </div>
 
-                <button type="submit" class="w-full bg-zinc-200 hover:bg-white text-zinc-900 font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 mt-2">
+                <button type="submit" class="w-full bg-zinc-200 hover:bg-white text-zinc-900 font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 mt-2 shadow-lg">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
                     </svg>
@@ -86,9 +91,9 @@
         </div>
     </main>
 
-    <footer></footer>
+    <footer class="relative z-10"></footer>
 
-    <!-- JavaScript: Itt kérjük le/alakítjuk át a játékbeli karakternevet -->
+    <!-- JavaScript -->
     <script>
         const form = document.getElementById('login-form');
         const usernameInput = document.getElementById('username');
@@ -96,13 +101,7 @@
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const accountName = usernameInput.value.trim();
-
-            // Ideiglenes/példa leképezés: Ha van backend, ott az adatbázisból kérdeznéd le a karakternevet.
-            // Most teszteléshez generálunk egy InGame karakternevet (pl. az első betűk nagyok, aláhúzással)
-            // vagy rendelhetsz hozzá fix nevet is.
             let characterName = accountName.charAt(0).toUpperCase() + accountName.slice(1) + "_Character"; 
-            
-            // Ha azt szeretnéd, hogy a dashboard a játékbeli nevet mutassa:
             window.location.href = `dashboard.html?character=${encodeURIComponent(characterName)}`;
         });
     </script>
