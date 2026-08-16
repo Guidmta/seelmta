@@ -9,7 +9,7 @@
 <body class="bg-zinc-950 text-white font-sans min-h-screen flex">
 
     <!-- BAL OLDALI MENÜ -->
-    <aside class="w-64 bg-zinc-900/90 border-r border-zinc-800 flex flex-col justify-between p-4 select-none">
+    <aside class="w-64 bg-zinc-900 border-r border-zinc-800 flex flex-col justify-between p-4 select-none">
         <div>
             <!-- Márka / Logó -->
             <div class="flex items-center gap-3 px-2 mb-6">
@@ -28,16 +28,16 @@
             <!-- Online státusz -->
             <div class="px-2 mb-6 flex items-center gap-2 text-xs text-zinc-400">
                 <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                <span><strong class="text-white" id="online-count">74</strong> online</span>
+                <span><strong class="text-white">74</strong> online</span>
             </div>
 
             <!-- Felhasználó kártya -->
-            <div class="bg-zinc-950/50 border border-zinc-800/80 rounded-xl p-3 mb-6 flex items-center gap-3">
+            <div class="bg-zinc-950/60 border border-zinc-800/80 rounded-xl p-3 mb-6 flex items-center gap-3 shadow-inner">
                 <div class="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold" id="user-initial">
-                    L
+                    S
                 </div>
                 <div class="overflow-hidden">
-                    <h2 class="text-sm font-bold text-white truncate" id="character-name">Lilly Kia</h2>
+                    <h2 class="text-sm font-bold text-white truncate" id="character-name">Shifty_Character</h2>
                     <p class="text-[11px] text-zinc-400">Játékos</p>
                 </div>
             </div>
@@ -97,7 +97,7 @@
             </nav>
         </div>
 
-        <!-- Alsó menü (Beállítások, Kijelentkezés) -->
+        <!-- Alsó menü -->
         <div class="space-y-1 pt-4 border-t border-zinc-800">
             <a href="beallitasok.html" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-zinc-400 hover:text-white hover:bg-zinc-800/50 transition-colors">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
@@ -110,13 +110,13 @@
         </div>
     </aside>
 
-    <!-- JOBB OLDALI TARTALOM (Főnézet) -->
+    <!-- JOBB OLDALI TARTALOM -->
     <main class="flex-grow p-8 overflow-y-auto">
         
-        <!-- Üdvözlés & Cél sáv -->
+        <!-- Üdvözlés -->
         <div class="mb-8">
             <span class="text-xs text-emerald-400 font-semibold tracking-wider uppercase">Irányítópult</span>
-            <h1 class="text-3xl font-bold text-white mt-1">Jó estét, <span id="welcome-name">Lilly Kia</span>!</h1>
+            <h1 class="text-3xl font-bold text-white mt-1">Jó estét, <span id="welcome-name">Shifty_Character</span>!</h1>
         </div>
 
         <!-- Közös cél doboz -->
@@ -126,7 +126,6 @@
                 <span class="text-xs font-bold text-emerald-400">94 / 50</span>
             </div>
             <p class="text-sm font-medium text-white mb-4">Érjük el az 50 fős peaket</p>
-            <!-- Progress bar -->
             <div class="w-full bg-zinc-950 h-2 rounded-full overflow-hidden mb-3">
                 <div class="bg-emerald-500 h-full rounded-full" style="width: 100%;"></div>
             </div>
@@ -137,25 +136,21 @@
 
         <!-- Fő statisztika kártyák -->
         <div class="grid grid-cols-4 gap-4 mb-8">
-            <!-- Egyenleg -->
             <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 shadow-lg">
                 <div class="text-xs font-medium text-zinc-400 mb-1">EGYENLEG</div>
                 <div class="text-2xl font-bold text-emerald-400 mb-1">$155,327</div>
                 <div class="text-xs text-zinc-500">Bank: <span class="text-zinc-300">$519,349</span></div>
             </div>
-            <!-- Prémium -->
             <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 shadow-lg">
                 <div class="text-xs font-medium text-zinc-400 mb-1">PRÉMIUM</div>
                 <div class="text-2xl font-bold text-sky-400 mb-1">10,323 <span class="text-sm font-normal text-zinc-400">PP</span></div>
                 <div class="text-xs text-transparent">_</div>
             </div>
-            <!-- Játékidő (0 órára állítva a kérésed szerint!) -->
             <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 shadow-lg">
                 <div class="text-xs font-medium text-zinc-400 mb-1">JÁTÉKIDŐ</div>
                 <div class="text-2xl font-bold text-white mb-1">0h 0m</div>
                 <div class="text-xs text-zinc-500">Frissítve: <span class="text-zinc-300">most</span></div>
             </div>
-            <!-- Állapot -->
             <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-5 shadow-lg">
                 <div class="text-xs font-medium text-zinc-400 mb-1">ÁLLAPOT</div>
                 <div class="text-2xl font-bold text-white mb-1">100 / <span class="text-red-400">0</span></div>
@@ -165,13 +160,12 @@
 
     </main>
 
-    <!-- JavaScript a karakter név átvételére a bejelentkezésből -->
+    <!-- JavaScript -->
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const character = urlParams.get('character');
 
         if (character) {
-            // Ha érkezett név a bejelentkezésből, beállítjuk
             document.getElementById('character-name').textContent = character;
             document.getElementById('welcome-name').textContent = character;
             document.getElementById('user-initial').textContent = character.charAt(0).toUpperCase();
