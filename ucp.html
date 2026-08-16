@@ -6,73 +6,85 @@
     <title>SEELMTA - Bejelentkezés</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-zinc-950 text-white font-sans min-h-screen flex flex-col justify-center items-center p-6 relative">
+<body class="bg-zinc-950 text-white font-sans min-h-screen flex flex-col justify-between p-6">
 
-    <!-- Jobb felső sarok: Kezdőlap gomb -->
-    <div class="absolute top-6 right-6">
-        <a href="index.html" class="text-sm bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 px-4 py-2 rounded-xl transition-colors flex items-center gap-2 shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-            </svg>
-            <span class="bg-gradient-to-r from-red-400 via-orange-400 to-red-500 bg-clip-text text-transparent font-medium">Kezdőlap</span>
-        </a>
-    </div>
-
-    <!-- Bejelentkezési Doboz -->
-    <div class="w-full max-w-md bg-zinc-900 border border-zinc-800 p-8 rounded-2xl shadow-2xl">
+    <!-- Felső Navigációs Sáv (Balra logo+név, Jobbra menük) -->
+    <header class="w-full max-w-7xl mx-auto flex items-center justify-between py-2">
         
-        <!-- Valódi Zöld Hatszög Logó és Címsor -->
-        <div class="text-center mb-6 flex flex-col items-center">
-            <div class="w-12 h-12 mb-3 flex items-center justify-center">
-                <!-- Zöld S-betűs hatszög logó SVG-ben újrateremtve, hogy tökéletesen mutasson -->
+        <!-- Bal oldal: Logó + SEELMTA név -->
+        <a href="index.html" class="flex items-center gap-3 group">
+            <div class="w-8 h-8 flex items-center justify-center">
                 <svg viewBox="0 0 100 115" class="w-full h-full drop-shadow-md" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M50 3L94.5 28.7V80.3L50 106L5.5 80.3V28.7L50 3Z" stroke="#4ADE80" stroke-width="8" stroke-linejoin="round"/>
                     <path d="M50 20L80.5 37.5V72.5L50 90L19.5 72.5V37.5L50 20Z" stroke="#4ADE80" stroke-width="4" stroke-opacity="0.4" stroke-linejoin="round"/>
-                    <!-- Stilizált S betű -->
                     <path d="M70 42H35V52H65V68H30" stroke="#4ADE80" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </div>
-            <h1 class="text-xl font-bold text-white mb-1">Bejelentkezés</h1>
-            <p class="text-zinc-400 text-xs">Add meg az adataid, melyekkel InGame regisztráltál.</p>
-        </div>
+            <span class="font-bold text-lg tracking-wider text-white group-hover:text-emerald-400 transition-colors">SEELMTA</span>
+        </a>
 
-        <form id="login-form" class="space-y-4">
-            <div>
-                <label class="block text-xs font-semibold text-zinc-300 mb-2">Felhasználónév</label>
-                <input type="text" id="username" required 
-                    class="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-3 px-4 text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-600 transition-colors">
+        <!-- Jobb oldal: Menüpontok -->
+        <nav class="flex items-center gap-6 text-sm text-zinc-400">
+            <a href="index.html" class="hover:text-white transition-colors">Kezdőlap</a>
+            <a href="forum.html" class="hover:text-white transition-colors">Fórum</a>
+            <a href="shop.html" class="hover:text-emerald-400 transition-colors">Vásárlás - PrémiumPont</a>
+            <a href="ucp.html" class="text-white font-medium hover:text-white transition-colors">Bejelentkezés</a>
+        </nav>
+    </header>
+
+    <!-- Középső Bejelentkezési Doboz (Logó nélkül, tisztán) -->
+    <main class="flex-grow flex items-center justify-center">
+        <div class="w-full max-w-md bg-zinc-900 border border-zinc-800 p-8 rounded-2xl shadow-2xl">
+            
+            <div class="text-center mb-6">
+                <h1 class="text-xl font-bold text-white mb-1">Bejelentkezés</h1>
+                <p class="text-zinc-400 text-xs">Add meg az adataid, melyekkel InGame regisztráltál.</p>
             </div>
 
-            <div>
-                <label class="block text-xs font-semibold text-zinc-300 mb-2">Jelszó</label>
-                <div class="relative">
-                    <input type="password" id="password" required 
-                        class="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-3 pl-4 pr-10 text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-600 transition-colors">
-                    <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-zinc-500 cursor-pointer">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                        </svg>
-                    </span>
+            <form id="login-form" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-zinc-300 mb-2">Felhasználónév</label>
+                    <input type="text" id="username" required 
+                        class="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-3 px-4 text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-600 transition-colors">
                 </div>
-            </div>
 
-            <!-- Emlékezz rám (pipa) opció, hogy ne kelljen újra beírni -->
-            <div class="flex items-center justify-between text-xs py-1">
-                <label class="flex items-center gap-2 cursor-pointer text-zinc-400 hover:text-zinc-300">
-                    <input type="checkbox" id="remember-me" class="w-4 h-4 rounded bg-zinc-950 border-zinc-800 text-emerald-500 focus:ring-0 cursor-pointer accent-emerald-500">
-                    <span>Emlékezz rám</span>
-                </label>
-            </div>
+                <div>
+                    <div class="flex items-center justify-between mb-2">
+                        <label class="text-xs font-semibold text-zinc-300">Jelszó</label>
+                        <a href="#" class="text-xs text-zinc-500 hover:text-zinc-300 transition-colors">Elfelejtett adatok?</a>
+                    </div>
+                    <div class="relative">
+                        <input type="password" id="password" required 
+                            class="w-full bg-zinc-950 border border-zinc-800 rounded-xl py-3 pl-4 pr-10 text-white placeholder-zinc-600 focus:outline-none focus:border-zinc-600 transition-colors">
+                        <span class="absolute inset-y-0 right-0 flex items-center pr-3 text-zinc-500 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
 
-            <button type="submit" class="w-full bg-zinc-200 hover:bg-white text-zinc-900 font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 mt-2">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-                </svg>
-                Bejelentkezés
-            </button>
-        </form>
-    </div>
+                <!-- Emlékezz rám pipa -->
+                <div class="flex items-center text-xs py-1">
+                    <label class="flex items-center gap-2 cursor-pointer text-zinc-400 hover:text-zinc-300">
+                        <input type="checkbox" id="remember-me" class="w-4 h-4 rounded bg-zinc-950 border-zinc-800 text-emerald-500 focus:ring-0 cursor-pointer accent-emerald-500">
+                        <span>Emlékezz rám</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="w-full bg-zinc-200 hover:bg-white text-zinc-900 font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 mt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                    </svg>
+                    Bejelentkezés
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Üres footer az egyensúlyért -->
+    <footer></footer>
 
     <!-- JavaScript -->
     <script>
