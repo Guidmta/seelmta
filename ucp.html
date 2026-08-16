@@ -21,10 +21,16 @@
     <!-- Bejelentkezési Doboz -->
     <div class="w-full max-w-md bg-zinc-900 border border-zinc-800 p-8 rounded-2xl shadow-2xl">
         
-        <!-- SEELMTA Logo és Címsor -->
+        <!-- Valódi Zöld Hatszög Logó és Címsor -->
         <div class="text-center mb-6 flex flex-col items-center">
-            <div class="mb-3 px-3 py-1 bg-zinc-950 border border-zinc-800 rounded-lg shadow-inner">
-                <span class="text-xs font-black tracking-widest bg-gradient-to-r from-red-500 via-orange-400 to-red-600 bg-clip-text text-transparent">SEELMTA</span>
+            <div class="w-12 h-12 mb-3 flex items-center justify-center">
+                <!-- Zöld S-betűs hatszög logó SVG-ben újrateremtve, hogy tökéletesen mutasson -->
+                <svg viewBox="0 0 100 115" class="w-full h-full drop-shadow-md" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 3L94.5 28.7V80.3L50 106L5.5 80.3V28.7L50 3Z" stroke="#4ADE80" stroke-width="8" stroke-linejoin="round"/>
+                    <path d="M50 20L80.5 37.5V72.5L50 90L19.5 72.5V37.5L50 20Z" stroke="#4ADE80" stroke-width="4" stroke-opacity="0.4" stroke-linejoin="round"/>
+                    <!-- Stilizált S betű -->
+                    <path d="M70 42H35V52H65V68H30" stroke="#4ADE80" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </div>
             <h1 class="text-xl font-bold text-white mb-1">Bejelentkezés</h1>
             <p class="text-zinc-400 text-xs">Add meg az adataid, melyekkel InGame regisztráltál.</p>
@@ -49,6 +55,14 @@
                         </svg>
                     </span>
                 </div>
+            </div>
+
+            <!-- Emlékezz rám (pipa) opció, hogy ne kelljen újra beírni -->
+            <div class="flex items-center justify-between text-xs py-1">
+                <label class="flex items-center gap-2 cursor-pointer text-zinc-400 hover:text-zinc-300">
+                    <input type="checkbox" id="remember-me" class="w-4 h-4 rounded bg-zinc-950 border-zinc-800 text-emerald-500 focus:ring-0 cursor-pointer accent-emerald-500">
+                    <span>Emlékezz rám</span>
+                </label>
             </div>
 
             <button type="submit" class="w-full bg-zinc-200 hover:bg-white text-zinc-900 font-semibold py-3 rounded-xl transition-colors flex items-center justify-center gap-2 mt-2">
