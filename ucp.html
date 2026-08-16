@@ -88,15 +88,22 @@
 
     <footer></footer>
 
-    <!-- JavaScript -->
+    <!-- JavaScript: Itt kérjük le/alakítjuk át a játékbeli karakternevet -->
     <script>
         const form = document.getElementById('login-form');
         const usernameInput = document.getElementById('username');
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
-            const username = usernameInput.value;
-            window.location.href = `dashboard.html?username=${encodeURIComponent(username)}`;
+            const accountName = usernameInput.value.trim();
+
+            // Ideiglenes/példa leképezés: Ha van backend, ott az adatbázisból kérdeznéd le a karakternevet.
+            // Most teszteléshez generálunk egy InGame karakternevet (pl. az első betűk nagyok, aláhúzással)
+            // vagy rendelhetsz hozzá fix nevet is.
+            let characterName = accountName.charAt(0).toUpperCase() + accountName.slice(1) + "_Character"; 
+            
+            // Ha azt szeretnéd, hogy a dashboard a játékbeli nevet mutassa:
+            window.location.href = `dashboard.html?character=${encodeURIComponent(characterName)}`;
         });
     </script>
 
