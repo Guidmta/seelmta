@@ -95,7 +95,7 @@
         const passwordInput = document.getElementById('password');
         const rememberCheckbox = document.getElementById('remember-me');
 
-        // Amikor betöltődik az oldal, megnézzük, hogy mentett-e már valamit
+        // Oldal betöltésekor ellenőrizzük, hogy van-e mentett adat
         window.addEventListener('DOMContentLoaded', () => {
             const savedUser = localStorage.getItem('seelmta_saved_user');
             const savedPass = localStorage.getItem('seelmta_saved_pass');
@@ -108,26 +108,26 @@
             }
         });
 
-        // Amikor rákattint a bejelentkezésre
+        // Bejelentkezés gomb nyomásakor
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const accountName = usernameInput.value.trim();
             const passwordVal = passwordInput.value;
             let characterName = accountName.charAt(0).toUpperCase() + accountName.slice(1) + "_Character";
 
-            // Ha be van pipálva az "Emlékezz rám"
+            // Ha be van pipálva, elmentjük
             if (rememberCheckbox.checked) {
                 localStorage.setItem('seelmta_saved_user', accountName);
                 localStorage.setItem('seelmta_saved_pass', passwordVal);
                 localStorage.setItem('seelmta_remember', 'true');
             } else {
-                // Ha nincs bepipálva, töröljük a mentett adatokat
+                // Ha nincs bepipálva, töröljük a mentést
                 localStorage.removeItem('seelmta_saved_user');
                 localStorage.removeItem('seelmta_saved_pass');
                 localStorage.removeItem('seelmta_remember');
             }
 
-            // Átirányítás a dashboardra a karakter névvel
+            // Átirányítás a dashboardra
             window.location.href = `dashboard.html?character=${encodeURIComponent(characterName)}`;
         });
     </script>
