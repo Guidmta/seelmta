@@ -11,14 +11,11 @@
     <!-- Háttérkép: A lilás Los Santos városkép -->
     <div class="absolute inset-0 z-0">
         <img src="ucp hater.jpg" alt="SEELMTA Háttér" class="w-full h-full object-cover">
-        <!-- Finom sötétítő réteg, hogy a doboz és a szövegek gyönyörűen olvashatóak maradjanak -->
         <div class="absolute inset-0 bg-zinc-950/70 backdrop-blur-[2px]"></div>
     </div>
 
     <!-- Felső Navigációs Sáv -->
     <header class="w-full max-w-7xl mx-auto flex items-center justify-between py-2 relative z-10">
-        
-        <!-- Bal oldal: Zöld hatszög S logó + SEELMTA név -->
         <a href="index.html" class="flex items-center gap-3 group">
             <div class="w-8 h-8 flex items-center justify-center">
                 <svg viewBox="0 0 512 512" class="w-full h-full drop-shadow-md" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,8 +25,6 @@
             </div>
             <span class="font-bold text-lg tracking-wider text-white group-hover:text-emerald-400 transition-colors">SEELMTA</span>
         </a>
-
-        <!-- Jobb oldal: Kezdőlap gomb -->
         <div>
             <a href="index.html" class="text-sm bg-zinc-900/80 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 px-4 py-2 rounded-xl transition-colors flex items-center gap-2 shadow-lg backdrop-blur-md">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -93,15 +88,45 @@
 
     <footer class="relative z-10"></footer>
 
-    <!-- JavaScript -->
+    <!-- JavaScript: Emlékezz rám logika & localStorage -->
     <script>
         const form = document.getElementById('login-form');
         const usernameInput = document.getElementById('username');
+        const rememberCheckbox = document.getElementById('remember-me');
+
+        // Ha korábban bejelölte az "Emlékezz rám"-ot, töltsük be a felhasználónevet
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedUser = localStorage.getItem('seelmta_saved_user');
+            if (savedUser) {
+                usernameInput.value = savedUser;
+                rememberCheckbox.checked = true;
+            }
+
+            // Opcionális: Ha már be van jelentkezve (van mentett session), automatikusan átvihetjük a dashboardra is
+            if (localStorage.getItem('seelmta_logged_in') === 'true') {
+                const charName = localStorage.getItem('seelmta_character') || 'Lilly Kia';
+                // window.location.href = `dashboard.html?character=${encodeURIComponent(charName)}`;
+            }
+        });
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const accountName = usernameInput.value.trim();
             let characterName = accountName.charAt(0).toUpperCase() + accountName.slice(1) + "_Character"; 
+
+            // Ha be van pipálva az "Emlékezz rám"
+            if (rememberCheckbox.checked) {
+                localStorage.setItem('seelmta_saved_user', accountName);
+                localStorage.setItem('seelmta_logged_in', 'true');
+                localStorage.setItem('seelmta_character', characterName);
+            } else {
+                // Ha nincs bepipálva, töröljük a mentést
+                localStorage.removeItem('seelmta_saved_user');
+                localStorage.removeItem('seelmta_logged_in');
+                localStorage.removeItem('seelmta_character');
+            }
+
+            // Átirányítás a dashboardra
             window.location.href = `dashboard.html?character=${encodeURIComponent(characterName)}`;
         });
     </script>
