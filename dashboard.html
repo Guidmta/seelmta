@@ -10,16 +10,33 @@
 
     <!-- Felső Menüsor -->
     <nav class="bg-zinc-900 border-b border-zinc-800 px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-            <img src="logo.png" alt="SEELMTA Logo" class="w-8 h-8 object-contain">
-            <span class="text-xl font-bold text-red-500 tracking-wider">SEELMTA</span>
+        <!-- Bal oldal: Logó, Név és Üdvözlés -->
+        <div class="flex items-center gap-4">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="SEELMTA Logo" class="w-8 h-8 object-contain">
+                <span class="text-xl font-bold text-red-500 tracking-wider">SEELMTA</span>
+            </div>
+            <div class="h-6 w-[1px] bg-zinc-800"></div>
+            <span class="text-sm text-zinc-300">Üdvözlünk, <span id="username-display" class="font-bold text-white">Játékos</span>!</span>
         </div>
-        <a href="ucp.html" class="text-sm bg-zinc-800 hover:bg-zinc-700 px-4 py-2 rounded-lg text-zinc-300 transition-colors">Kijelentkezés</a>
+
+        <!-- Jobb oldal: Gombok (Vissza a főoldalra + Kijelentkezés) -->
+        <div class="flex items-center gap-3">
+            <a href="index.html" class="text-sm bg-zinc-800/80 hover:bg-zinc-700 text-zinc-200 border border-zinc-700/60 px-4 py-2 rounded-lg transition-colors flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+                Vissza fő oldalra
+            </a>
+            <a href="ucp.html" class="text-sm bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 px-4 py-2 rounded-lg transition-colors">
+                Kijelentkezés
+            </a>
+        </div>
     </nav>
 
     <!-- Fő Tartalom -->
     <div class="max-w-6xl mx-auto p-6">
-        <h1 class="text-2xl font-bold mb-6">Üdvözlünk a Vezérlőpulton!</h1>
+        <h1 class="text-2xl font-bold mb-6">Vezérlőpult</h1>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             <!-- Karakter info kártya -->
@@ -39,6 +56,15 @@
             </div>
         </div>
     </div>
+
+    <!-- JavaScript, ami kiolvassa a nevet a bejelentkezésből (ha átadták) -->
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username');
+        if (username) {
+            document.getElementById('username-display').textContent = username;
+        }
+    </script>
 
 </body>
 </html>
