@@ -8,23 +8,20 @@
 </head>
 <body class="bg-zinc-950 text-white font-sans min-h-screen">
 
-    <!-- Felső Menüsor (Csak logó és gombok) -->
+    <!-- Felső Menüsor -->
     <nav class="bg-zinc-900 border-b border-zinc-800 px-6 py-4 flex justify-between items-center">
         <!-- Bal oldal: Logó -->
         <div class="flex items-center gap-3">
             <span class="text-xl font-bold text-red-500 tracking-wider">SEELMTA</span>
         </div>
 
-        <!-- Jobb oldal: Gombok -->
+        <!-- Jobb oldal: Csak a főoldalra visszajuttató gomb -->
         <div class="flex items-center gap-3">
-            <a href="index.html" class="text-sm bg-zinc-800/80 hover:bg-zinc-700 text-zinc-200 border border-zinc-700/60 px-4 py-2 rounded-lg transition-colors flex items-center gap-2">
+            <a href="index.html" class="text-sm bg-zinc-800/80 hover:bg-zinc-700 text-zinc-200 border border-zinc-700/60 px-4 py-2 rounded-lg transition-colors flex items-center gap-2 shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
                 </svg>
                 Vissza fő oldalra
-            </a>
-            <a href="ucp.html" class="text-sm bg-red-500/10 hover:bg-red-500/20 text-red-400 border border-red-500/30 px-4 py-2 rounded-lg transition-colors">
-                Kijelentkezés
             </a>
         </div>
     </nav>
@@ -34,46 +31,23 @@
         
         <h1 class="text-2xl font-bold pt-2">Vezérlőpult</h1>
 
-        <!-- Grid elrendezés: Balra a profilkártya, mellette a többi adat -->
+        <!-- Adatok kártyái -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            <!-- Karakter Profil Kártya (Bal oldalon, lent) -->
-            <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden shadow-2xl">
-                <!-- Felső rész: Szerver név és online státusz -->
-                <div class="p-5 border-b border-zinc-800">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-10 h-10 bg-red-500/10 rounded-lg flex items-center justify-center text-red-500 font-bold border border-red-500/20">S</div>
-                        <div>
-                            <h2 class="text-white font-bold text-lg leading-none">SEELMTA</h2>
-                            <span class="text-red-500 text-xs font-semibold uppercase tracking-wider">UCP</span>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-2 text-zinc-400 text-sm">
-                        <span class="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                        <span>0 online</span>
-                    </div>
-                </div>
-
-                <!-- Alsó rész: Játékos adatai -->
-                <div class="p-5 bg-zinc-900/50 flex items-center gap-4">
-                    <div id="player-avatar" class="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center text-red-500 font-bold text-xl border border-red-500/30">
-                        J
-                    </div>
-                    <div>
-                        <h3 id="display-name" class="text-white font-bold text-base">Minta Játékos</h3>
-                        <p class="text-zinc-500 text-sm">Játékos</p>
-                    </div>
-                </div>
+            <!-- Karakter Név Kártya -->
+            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
+                <h3 class="text-zinc-400 text-sm font-semibold uppercase mb-2">Karakter Név</h3>
+                <p id="character-name-card" class="text-xl font-bold text-white">Minta_Jatekos</p>
             </div>
 
-            <!-- Készpénz kártya -->
-            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-xl flex flex-col justify-center">
+            <!-- Készpénz Kártya -->
+            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
                 <h3 class="text-zinc-400 text-sm font-semibold uppercase mb-2">Készpénz</h3>
                 <p class="text-xl font-bold text-emerald-400">$ 150,000</p>
             </div>
 
-            <!-- Játszott percek kártya -->
-            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-xl flex flex-col justify-center">
+            <!-- Játszott percek Kártya -->
+            <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-xl">
                 <h3 class="text-zinc-400 text-sm font-semibold uppercase mb-2">Játszott percek</h3>
                 <p class="text-xl font-bold text-red-500">1,240 perc</p>
             </div>
@@ -81,14 +55,13 @@
         </div>
     </div>
 
-    <!-- JavaScript: Átveszi a nevet a bejelentkezésből -->
+    <!-- JavaScript: Átveszi a beírt nevet a bejelentkezésből -->
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         const username = urlParams.get('username');
         
         if (username) {
-            document.getElementById('display-name').textContent = username;
-            document.getElementById('player-avatar').textContent = username.charAt(0).toUpperCase();
+            document.getElementById('character-name-card').textContent = username;
         }
     </script>
 
